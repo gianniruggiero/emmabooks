@@ -15,4 +15,16 @@ class Book extends Model
     {
     return $this->belongsToMany('App\Tag');
     }
+
+    public function loan()
+    {
+    return $this->hasOne('App\Loan');
+    }
+
+    public function genre()
+    {
+    return $this->belongsTo('App\Genre');
+    }
+
+
 }

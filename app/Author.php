@@ -13,9 +13,10 @@ class Author extends Model
     return $this->belongsToMany('App\Book', 'book_author');
     }
 
-    public function tags()
+    public function author_info()
     {
-    return $this->belongsToMany('App\Tag');
+    return $this->hasOne('App\Author_Info');
     }
+
 
 }

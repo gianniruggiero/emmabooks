@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <header>
+    <header class="fixed-top">
         @include('Partials/header')
     </header>
 
@@ -17,7 +17,7 @@
         @yield('main-content')
     </main>
     
-    <footer>
+    <footer class="fixed-bottom">
         @include('Partials/footer')
     </footer>
 

@@ -1,0 +1,30 @@
+header {
+    background-color: #d3039e;
+}
+.top-header{
+    background-color: #d3039e;
+    color: white;
+    .logo {
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a {
+            font-family: 'Fredoka One', cursive;
+            color: white;
+        }
+    }
+    .navbar-main-ul {
+        height: 40px;
+        margin: 0px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        & li {
+            margin-left: 10px;
+            a {
+                color: white;
+            }
+        } 
+    }
+}

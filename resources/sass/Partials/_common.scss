@@ -1,0 +1,9 @@
+body {
+    overflow-y: scroll;
+    main {
+        // per la position fixed dell'header
+        position: relative;
+        top: 40px;
+    }
+}
+

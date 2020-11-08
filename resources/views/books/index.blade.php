@@ -1,7 +1,7 @@
 @extends('layouts/main')
 
 @section('main-content')
-    <h1>Lista genrale dei libri</h1>
+    <h1>Lista generale dei libri</h1>
 
     @foreach ($books as $book)
         <a href="{{Route('books.show', $book->id)}}">

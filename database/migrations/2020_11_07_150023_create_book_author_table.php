@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateBookAuthorTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('book_author', function (Blueprint $table) {
+            // secondary key = alla primary key della tabella books
+            $table->foreignId('book_id')->constrained();
+
+            // $table->unsignedBigInteger('book_id');
+            // $table->foreign('book_id')->references('id')->on('books');
+
+            // secondary key = alla primary key della tabella tags
+            // $table->unsignedBigInteger('author_id');
+            // $table->foreign('author_id')->references('id')->on('authors');
+            $table->foreignId('author_id')->constrained();
+
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('book_author');
+    }
+}
